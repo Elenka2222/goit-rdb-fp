@@ -1,0 +1,196 @@
+Entity,Code,duplicates_count
+Afghanistan,AFG,37
+Albania,ALB,41
+Algeria,DZA,41
+Andorra,AND,22
+Angola,AGO,40
+"Antigua and Barbuda",ATG,30
+Argentina,ARG,41
+Armenia,ARM,30
+Australia,AUS,41
+Austria,AUT,41
+Azerbaijan,AZE,30
+Bahamas,BHS,30
+Bahrain,BHR,41
+Bangladesh,BGD,41
+Barbados,BRB,30
+Belarus,BLR,30
+Belgium,BEL,41
+Belize,BLZ,30
+Benin,BEN,41
+Bhutan,BTN,39
+Bolivia,BOL,41
+"Bosnia and Herzegovina",BIH,30
+Botswana,BWA,41
+Brazil,BRA,41
+Brunei,BRN,41
+Bulgaria,BGR,41
+"Burkina Faso",BFA,41
+Burundi,BDI,41
+Cambodia,KHM,41
+Cameroon,CMR,41
+Canada,CAN,41
+"Cape Verde",CPV,41
+"Central African Republic",CAF,41
+Chad,TCD,31
+Chile,CHL,41
+China,CHN,41
+Colombia,COL,41
+Comoros,COM,41
+Congo,COG,41
+"Cook Islands",COK,30
+"Costa Rica",CRI,41
+"Cote d'Ivoire",CIV,38
+Croatia,HRV,30
+Cuba,CUB,41
+Cyprus,CYP,41
+Czechia,CZE,30
+"Democratic Republic of Congo",COD,40
+Denmark,DNK,41
+Djibouti,DJI,37
+Dominica,DMA,30
+"Dominican Republic",DOM,41
+"East Timor",TLS,19
+Ecuador,ECU,41
+Egypt,EGY,41
+"El Salvador",SLV,41
+"Equatorial Guinea",GNQ,36
+Eritrea,ERI,27
+Estonia,EST,30
+Eswatini,SWZ,40
+Ethiopia,ETH,41
+Fiji,FJI,30
+Finland,FIN,41
+France,FRA,40
+Gabon,GAB,35
+Gambia,GMB,40
+Georgia,GEO,30
+Germany,DEU,41
+Ghana,GHA,41
+Greece,GRC,41
+Grenada,GRD,30
+Guatemala,GTM,41
+Guinea,GIN,41
+Guinea-Bissau,GNB,40
+Guyana,GUY,30
+Haiti,HTI,41
+Honduras,HND,41
+Hungary,HUN,41
+Iceland,ISL,41
+India,IND,41
+Indonesia,IDN,41
+Iran,IRN,41
+Iraq,IRQ,41
+Ireland,IRL,41
+Israel,ISR,41
+Italy,ITA,41
+Jamaica,JAM,30
+Japan,JPN,40
+Jordan,JOR,41
+Kazakhstan,KAZ,30
+Kenya,KEN,41
+Kiribati,KIR,30
+Kuwait,KWT,41
+Kyrgyzstan,KGZ,30
+Laos,LAO,40
+Latvia,LVA,30
+Lebanon,LBN,38
+Lesotho,LSO,41
+Liberia,LBR,39
+Libya,LBY,41
+Lithuania,LTU,30
+Luxembourg,LUX,40
+Madagascar,MDG,41
+Malawi,MWI,41
+Malaysia,MYS,41
+Maldives,MDV,41
+Mali,MLI,41
+Malta,MLT,41
+"Marshall Islands",MHL,30
+Mauritania,MRT,41
+Mauritius,MUS,41
+Mexico,MEX,41
+"Micronesia (country)",FSM,22
+Moldova,MDA,30
+Monaco,MCO,39
+Mongolia,MNG,40
+Montenegro,MNE,15
+Morocco,MAR,41
+Mozambique,MOZ,41
+Myanmar,MMR,41
+Namibia,NAM,32
+Nauru,NRU,28
+Nepal,NPL,41
+Netherlands,NLD,41
+"New Zealand",NZL,41
+Nicaragua,NIC,41
+Niger,NER,41
+Nigeria,NGA,41
+Niue,NIU,30
+"North Korea",PRK,40
+"North Macedonia",MKD,30
+Norway,NOR,41
+Oman,OMN,41
+Pakistan,PAK,41
+Palau,PLW,30
+Panama,PAN,41
+"Papua New Guinea",PNG,41
+Paraguay,PRY,41
+Peru,PER,41
+Philippines,PHL,41
+Poland,POL,41
+Portugal,PRT,41
+Qatar,QAT,41
+Romania,ROU,41
+Russia,RUS,30
+Rwanda,RWA,41
+"Saint Kitts and Nevis",KNA,30
+"Saint Lucia",LCA,30
+"Saint Vincent and the Grenadines",VCT,30
+Samoa,WSM,30
+"San Marino",SMR,38
+"Sao Tome and Principe",STP,41
+"Saudi Arabia",SAU,41
+Senegal,SEN,41
+Serbia,SRB,41
+Seychelles,SYC,41
+"Sierra Leone",SLE,40
+Singapore,SGP,40
+Slovakia,SVK,30
+Slovenia,SVN,30
+"Solomon Islands",SLB,30
+Somalia,SOM,31
+"South Africa",ZAF,41
+"South Korea",KOR,39
+"South Sudan",SSD,12
+Spain,ESP,41
+"Sri Lanka",LKA,41
+Sudan,SDN,41
+Suriname,SUR,30
+Sweden,SWE,41
+Switzerland,CHE,41
+Syria,SYR,41
+Tajikistan,TJK,30
+Tanzania,TZA,40
+Thailand,THA,41
+Togo,TGO,41
+Tonga,TON,30
+"Trinidad and Tobago",TTO,30
+Tunisia,TUN,41
+Turkey,TUR,41
+Turkmenistan,TKM,30
+Tuvalu,TUV,29
+Uganda,UGA,37
+Ukraine,UKR,30
+"United Arab Emirates",ARE,40
+"United Kingdom",GBR,41
+"United States",USA,41
+Uruguay,URY,41
+Uzbekistan,UZB,30
+Vanuatu,VUT,30
+Venezuela,VEN,41
+Vietnam,VNM,41
+World,OWID_WRL,41
+Yemen,YEM,40
+Zambia,ZMB,40
+Zimbabwe,ZWE,41

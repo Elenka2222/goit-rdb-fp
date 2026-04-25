@@ -1,0 +1,131 @@
+-- 1
+CREATE SCHEMA IF NOT EXISTS `pandemic`;
+use `pandemic`;
+
+SELECT * FROM infectious_cases LIMIT 20;
+
+SELECT COUNT(*) AS total_original_records
+FROM infectious_cases;
+
+SELECT Entity, Code, COUNT(*) AS duplicates_count
+FROM infectious_cases
+GROUP BY Entity, Code
+ORDER BY Entity;
+
+-- 2
+CREATE TABLE IF NOT EXISTS entities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    entity VARCHAR(255),
+    code VARCHAR(10),
+    UNIQUE(entity, code)
+);
+
+INSERT INTO entities (entity, code)
+SELECT DISTINCT Entity, Code
+FROM infectious_cases;
+
+CREATE TABLE IF NOT EXISTS infectious_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    entity_id INT,
+    year INT,
+    disease VARCHAR(100),
+    cases DECIMAL(15,2),
+    FOREIGN KEY (entity_id) REFERENCES entities(id)
+);
+
+INSERT INTO infectious_stats (entity_id, year, disease, cases)
+
+SELECT 
+    e.id,
+    ic.Year,
+    'yaws',
+    CAST(NULLIF(ic.Number_yaws, '') AS DECIMAL(15,2))
+FROM infectious_cases ic
+JOIN entities e
+    ON e.entity = ic.Entity
+   AND COALESCE(e.code, 'NA') = COALESCE(ic.Code, 'NA')
+
+UNION ALL
+
+SELECT 
+    e.id,
+    ic.Year,
+    'rabies',
+    CAST(NULLIF(ic.Number_rabies, '') AS DECIMAL(15,2))
+FROM infectious_cases ic
+JOIN entities e
+    ON e.entity = ic.Entity
+   AND COALESCE(e.code, 'NA') = COALESCE(ic.Code, 'NA')
+
+UNION ALL
+
+SELECT 
+    e.id,
+    ic.Year,
+    'polio',
+    CAST(NULLIF(ic.polio_cases, '') AS DECIMAL(15,2))
+FROM infectious_cases ic
+JOIN entities e
+    ON e.entity = ic.Entity
+   AND COALESCE(e.code, 'NA') = COALESCE(ic.Code, 'NA')
+
+UNION ALL
+
+SELECT 
+    e.id,
+    ic.Year,
+    'guinea_worm',
+    CAST(NULLIF(ic.cases_guinea_worm, '') AS DECIMAL(15,2))
+FROM infectious_cases ic
+JOIN entities e
+    ON e.entity = ic.Entity
+   AND COALESCE(e.code, 'NA') = COALESCE(ic.Code, 'NA');
+
+SELECT COUNT(*) AS entities_count FROM entities;
+SELECT COUNT(*) AS stats_count FROM infectious_stats;
+
+-- 3
+SELECT 
+    e.entity,
+    e.code,
+    AVG(s.cases) AS avg_rabies,
+    MIN(s.cases) AS min_rabies,
+    MAX(s.cases) AS max_rabies,
+    SUM(s.cases) AS total_rabies
+FROM infectious_stats s
+JOIN entities e ON s.entity_id = e.id
+WHERE s.disease = 'rabies'
+  AND s.cases IS NOT NULL
+  AND s.cases <> ''
+GROUP BY e.id, e.entity, e.code
+ORDER BY avg_rabies DESC
+LIMIT 10;
+
+-- 4 
+SELECT year, MAKEDATE(year, 1) AS start_of_year_date, CURDATE() AS today_date,
+TIMESTAMPDIFF(YEAR, MAKEDATE(year, 1), CURDATE()) AS year_difference
+FROM infectious_stats;
+
+-- 5 
+use `pandemic`;
+
+DROP FUNCTION IF EXISTS GetYearDifference;
+
+DELIMITER //
+
+CREATE FUNCTION GetYearDifference(input_year INT) 
+RETURNS INT
+DETERMINISTIC
+NO SQL
+BEGIN
+     RETURN TIMESTAMPDIFF(
+        YEAR, 
+        MAKEDATE(input_year, 1), 
+        CURDATE()
+    );
+END //
+
+DELIMITER ;
+
+SELECT year, GetYearDifference(year) AS calculated_difference
+FROM infectious_stats;
